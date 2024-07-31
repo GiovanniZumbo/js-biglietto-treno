@@ -12,6 +12,33 @@ body {
     font-family: Montserrat, 'Helvetica Neue', sans-serif;
 }
 
+#page {
+    height: 100vh;
+    background-image: url("../img/wp9501611-train-computer-wallpapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative
+}
+
+#page::before {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
 /* Utilities */
 
 .container {
