@@ -15,6 +15,10 @@ Stampare il risultato / Output the result
 
 */
 
+// @Bonus
+
+resultElement = document.getElementById('message');
+
 // # STAGING
 
 // * 1. Creare una variabile per il costo per chilometro / Make a price/distance var
@@ -70,14 +74,19 @@ const finalOverPrice = overPrice(ticketPrice, overPercDiscount).toFixed(2)
 
 // * 8. Stampare il risultato / Output the result
 
+let message = '';
+
+
 if (age < 18) {
-    alert(`Il costo del tuo biglietto è: ${finalUnderPrice}€. Hai usufruito del 20% di sconto.`);
+    message = `${finalUnderPrice}€. Hai usufruito del 20% di sconto.`;
     console.log('finalUnderPrice', finalUnderPrice);
 
 } else if (age >= 65) {
-    alert(`Il costo del tuo biglietto è: ${finalOverPrice}€. Hai usufruito del 40% di sconto.`);
+    message = `${finalOverPrice}€. Hai usufruito del 40% di sconto.`;
     console.log('finalOverPrice', finalOverPrice);
 
 } else {
-    alert(`Il costo del tuo biglietto è: ${ticketPrice}€`);
+    message = ticketPrice;
 }
+
+resultElement.innerHTML = `Il costo del tuo biglietto è: ${message} `;
