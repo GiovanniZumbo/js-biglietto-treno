@@ -39,10 +39,18 @@ console.log('age', age);
 const ticketPrice = ((distance * priceUnit).toFixed(2));
 console.log('ticketPrice', ticketPrice);
 
-// * 4. Creare una variabile per lo sconto minorenni / Make an under18 discount var
+// * 4. Creare una variabile per lo sconto minorenni / Make an under18 discount var 
+
 
 const underPercDiscount = 20;
 
+// * 5. Creare una variabile per lo sconto over 65 / Make an over65 discount var
+
+const overPercDiscount = 40;
+
+// * 6. Calcolare il prezzo finale del biglietto. / Calculate reduced price ticket
+
+// Under
 function underPrice(ticketPrice, underPercDiscount) {
     const underDiscount = (ticketPrice * underPercDiscount) / 100;
     return ticketPrice - underDiscount;
@@ -50,9 +58,7 @@ function underPrice(ticketPrice, underPercDiscount) {
 
 const finalUnderPrice = underPrice(ticketPrice, underPercDiscount).toFixed(2)
 
-// * 5. Creare una variabile per lo sconto over 65 / Make an over65 discount var
-
-const overPercDiscount = 40;
+// Over
 
 function overPrice(ticketPrice, overPercDiscount) {
     const overDiscount = (ticketPrice * overPercDiscount) / 100;
@@ -61,7 +67,10 @@ function overPrice(ticketPrice, overPercDiscount) {
 
 const finalOverPrice = overPrice(ticketPrice, overPercDiscount).toFixed(2)
 
+
 // # OUTPUT 
+
+// * 7. Stampare il risultato / Output the result
 
 if (age < 18) {
     alert(`Il costo del tuo biglietto è: ${finalUnderPrice}€`);
