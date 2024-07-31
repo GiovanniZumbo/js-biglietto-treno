@@ -4,7 +4,7 @@
 // PLANNING
 
 /*
-
+Creare una variabile per il costo per chilometro / Make a price/distance var
 Chiedere il numero di chilometri da percorrere. / Request travel distance 
 Chiedere l'età del passeggero. / Request traveller age
 Calcolare il prezzo del biglietto senza sconto. / Calculate full price ticket
@@ -16,6 +16,9 @@ Stampare il risultato / Output the result
 */
 
 // # STAGING
+
+// * 0. Creare una variabile per il costo per chilometro / Make a price/distance var
+const priceUnit = 0.21;
 
 // # GATHERING DATA
 
@@ -30,5 +33,10 @@ const age = prompt("Inserisci la tua età");
 console.log('age', age);
 
 // # PROCESSING
+
+// * 3. Calcolare il prezzo del biglietto senza sconto. / Calculate full price ticket
+
+const ticketPrice = (distance * priceUnit);
+console.log('ticketPrice', ticketPrice);
 
 // # OUTPUT 
