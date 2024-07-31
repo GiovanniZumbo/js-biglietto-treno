@@ -24,6 +24,11 @@ Stampare il risultato / Output the result
 const distance = parseInt(prompt("Inserisci la distanza da percorrere (km)", 0))
 console.log('distance', distance);
 
+// * 2. Chiedere l'età del passeggero. / Request traveller age
+
+const age = prompt("Inserisci la tua età");
+console.log('age', age);
+
 // # PROCESSING
 
 // # OUTPUT 
