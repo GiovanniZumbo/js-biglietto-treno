@@ -36,11 +36,15 @@ const overPercDiscount = 40;
 
 const distance = parseInt(prompt("Inserisci la distanza da percorrere (km)", 12, 5))
 console.log('distance', distance);
+resultDistance = document.getElementById('distance')
+resultDistance.innerHTML = `Distanza da percorrere: ${distance} km.`;
 
 // * 5. Chiedere l'età del passeggero. / Request traveller age
 
 const age = parseInt(prompt("Inserisci la tua età", 25));
 console.log('age', age);
+resultDistance = document.getElementById('age')
+resultDistance.innerHTML = `Età inserita: ${age} anni.`;
 
 // # PROCESSING
 
@@ -78,11 +82,11 @@ let message = '';
 
 
 if (age < 18) {
-    message = `${finalUnderPrice}€. Hai usufruito del 20% di sconto.`;
+    message = `<del>${ticketPrice}€</del> ${finalUnderPrice}€. <br> <b>Hai usufruito del 20% di sconto.</b>`;
     console.log('finalUnderPrice', finalUnderPrice);
 
 } else if (age >= 65) {
-    message = `${finalOverPrice}€. Hai usufruito del 40% di sconto.`;
+    message = `<del>${ticketPrice}€</del> ${finalOverPrice}€. <br> <b>Hai usufruito del 40% di sconto.</b>`;
     console.log('finalOverPrice', finalOverPrice);
 
 } else {
