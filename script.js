@@ -36,7 +36,9 @@ console.log('age', age);
 
 // * 3. Calcolare il prezzo del biglietto senza sconto. / Calculate full price ticket
 
-const ticketPrice = (distance * priceUnit);
+const ticketPrice = ((distance * priceUnit).toFixed(2));
 console.log('ticketPrice', ticketPrice);
+
+alert(`Il costo del tuo biglietto è: ${ticketPrice}€`)
 
 // # OUTPUT 
